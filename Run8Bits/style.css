@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-frame {
+    width: 80%;
+    height: 500px;
+    border: 1px solid black;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(104, 141, 196);
+}
+
+.pipe-map {
+    position: absolute;
+    bottom: 98px;
+    width: 80px;
+    animation: pipe-animation 2s infinite linear;
+}
+
+.mario-floor {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 20%;
+}
+
+.mario-hero {
+    position: absolute;
+    bottom: 98px;
+    left: 0;
+    width: 120px;
+}
+
+.jump {
+    animation: jump 600ms ease-out;
+}
+
+@keyframes jump {
+    0% {
+        bottom: 98px;
+    }
+    40% {
+        bottom: 300px;
+    }
+    50% {
+        bottom: 300px;
+    }
+    60% {
+        bottom: 300px;
+    }
+    100% {
+        bottom: 98px;
+    }
+}
+
+@keyframes pipe-animation {
+    from {
+        right: -80px;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+.main-title {
+    font-family: 'Sarpanch', sans-serif;
+    text-align: center;
+    font-size: 60px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Sarpanch&display=swap');
